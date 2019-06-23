@@ -6,6 +6,11 @@ public class Point : MonoBehaviour
     [SerializeField]
     private float _lifeTime;
 
+    public Vector3 GetPosition()
+    {
+        return transform.position;
+    }
+
     private void Update()
     {
         _lifeTime -= Time.deltaTime;

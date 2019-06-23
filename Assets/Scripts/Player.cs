@@ -25,8 +25,7 @@ public class Player : MonoBehaviour
     {
         if (other.tag == "Finish")
         {
-            _exitGround = _currentGround;
-            _currentGround = null;   
+            _exitGround = _currentGround;    
         }
     }
 }

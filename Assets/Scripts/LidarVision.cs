@@ -43,7 +43,8 @@ public class LidarVision : MonoBehaviour
             {
                 if (_hit.transform.tag == "OpaqueObject")
                 {
-                    Instantiate(_point, _hit.point, Quaternion.identity);
+                    var point = Instantiate(_point, _hit.point, Quaternion.identity);
+                    point.transform.parent = GameObject.Find("PointCloud").transform;
                 }
             }
         }
