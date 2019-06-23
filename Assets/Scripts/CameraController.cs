@@ -13,9 +13,13 @@ public class CameraController : MonoBehaviour
     [SerializeField]
     private float _speedTracking;
 
+    [SerializeField]
+    private Camera _lidarCamera;
+
     private void Awake()
     {
         transform.position = _targetPosition.position;
+        _lidarCamera.rect = new Rect(Camera.main.rect.xMax / 1.5f, Camera.main.rect.yMax / 1.5f, Camera.main.rect.xMax, Camera.main.rect.yMax);
     }
 
     private void Update()
