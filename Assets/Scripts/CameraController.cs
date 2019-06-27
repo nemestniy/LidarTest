@@ -18,13 +18,16 @@ public class CameraController : MonoBehaviour
 
     private void Awake()
     {
-        transform.position = _targetPosition.position;
+        if(_targetPosition != null) 
+            transform.position = _targetPosition.position;
         _lidarCamera.rect = new Rect(Camera.main.rect.xMax / 1.5f, Camera.main.rect.yMax / 1.5f, Camera.main.rect.xMax, Camera.main.rect.yMax);
     }
 
     private void Update()
     {
-        transform.position = Vector3.Lerp(transform.position, _targetPosition.position, _speedTracking * Time.deltaTime);
-        transform.LookAt(_trackingObject);
+        if(_targetPosition != null)
+            transform.position = Vector3.Lerp(transform.position, _targetPosition.position, _speedTracking * Time.deltaTime);
+        if(_trackingObject != null)
+            transform.LookAt(_trackingObject);
     }
 }

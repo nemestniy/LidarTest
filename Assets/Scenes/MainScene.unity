@@ -804,60 +804,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8048138368435129782, guid: f875562aede93d24aa67952252bb2ba4,
+    - target: {fileID: 2739585518666103937, guid: f875562aede93d24aa67952252bb2ba4,
         type: 3}
-      propertyPath: _speedUpdate
-      value: 1000
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 467218036924153415, guid: f875562aede93d24aa67952252bb2ba4,
+    - target: {fileID: 6572071812818892112, guid: f875562aede93d24aa67952252bb2ba4,
         type: 3}
-      propertyPath: _speedUpdate
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 5142406489070524882, guid: f875562aede93d24aa67952252bb2ba4,
-        type: 3}
-      propertyPath: _speedUpdate
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 4863511935707463548, guid: f875562aede93d24aa67952252bb2ba4,
-        type: 3}
-      propertyPath: m_ForwardFriction.m_ExtremumValue
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4863511935707463548, guid: f875562aede93d24aa67952252bb2ba4,
-        type: 3}
-      propertyPath: m_SidewaysFriction.m_ExtremumValue
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6847434453533380930, guid: f875562aede93d24aa67952252bb2ba4,
-        type: 3}
-      propertyPath: m_ForwardFriction.m_ExtremumValue
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6847434453533380930, guid: f875562aede93d24aa67952252bb2ba4,
-        type: 3}
-      propertyPath: m_SidewaysFriction.m_ExtremumValue
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7515565150605113122, guid: f875562aede93d24aa67952252bb2ba4,
-        type: 3}
-      propertyPath: m_ForwardFriction.m_ExtremumValue
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7515565150605113122, guid: f875562aede93d24aa67952252bb2ba4,
-        type: 3}
-      propertyPath: m_SidewaysFriction.m_ExtremumValue
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4888060148085563310, guid: f875562aede93d24aa67952252bb2ba4,
-        type: 3}
-      propertyPath: m_ForwardFriction.m_ExtremumValue
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4888060148085563310, guid: f875562aede93d24aa67952252bb2ba4,
-        type: 3}
-      propertyPath: m_SidewaysFriction.m_ExtremumValue
-      value: 2
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f875562aede93d24aa67952252bb2ba4, type: 3}
