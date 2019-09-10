@@ -202,7 +202,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _accuracy: 20
   _rayDistance: 75
-  _speedUpdate: 100
+  _periodImpulse: 0
+  _periodUpdate: 0
+  _deltaAngle: 0
   _point: {fileID: 4467240183047226814, guid: fcb9f16ee1d358744b00bde982572a00, type: 3}
   _directions:
   - {x: 0, y: -0.5, z: 0.8660254}
@@ -729,55 +731,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22ce5fe010f4f024e8373321efb3e408, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _accuracy: 22
+  _accuracy: 15
   _rayDistance: 75
-  _speedUpdate: 1
+  _periodImpulse: 0.002
+  _periodUpdate: 0.01
+  _deltaAngle: 10
   _point: {fileID: 4467240183047226814, guid: fcb9f16ee1d358744b00bde982572a00, type: 3}
   _directions:
   - {x: 0, y: -0.5, z: 0.8660254}
-  - {x: 0, y: -0.46947157, z: 0.88294756}
   - {x: 0, y: -0.43837115, z: 0.89879405}
-  - {x: 0, y: -0.40673664, z: 0.9135454}
   - {x: 0, y: -0.37460658, z: 0.92718387}
-  - {x: 0, y: -0.34202012, z: 0.9396926}
   - {x: 0, y: -0.309017, z: 0.95105654}
-  - {x: 0, y: -0.27563736, z: 0.9612617}
   - {x: 0, y: -0.2419219, z: 0.9702957}
-  - {x: 0, y: -0.2079117, z: 0.9781476}
   - {x: 0, y: -0.17364818, z: 0.9848077}
-  - {x: 0, y: -0.1391731, z: 0.99026805}
   - {x: 0, y: -0.104528464, z: 0.9945219}
-  - {x: 0, y: -0.06975647, z: 0.9975641}
   - {x: 0, y: -0.034899496, z: 0.99939084}
-  - {x: 0, y: 0, z: 1}
   - {x: 0, y: 0.034899496, z: 0.99939084}
-  - {x: 0, y: 0.06975647, z: 0.9975641}
   - {x: 0, y: 0.104528464, z: 0.9945219}
-  - {x: 0, y: 0.1391731, z: 0.99026805}
   - {x: 0, y: 0.17364818, z: 0.9848077}
-  - {x: 0, y: 0.2079117, z: 0.9781476}
   - {x: 0, y: 0.2419219, z: 0.9702957}
-  - {x: 0, y: 0.27563736, z: 0.9612617}
   - {x: 0, y: 0.309017, z: 0.95105654}
-  - {x: 0, y: 0.34202012, z: 0.9396926}
   - {x: 0, y: 0.37460658, z: 0.92718387}
-  - {x: 0, y: 0.40673664, z: 0.9135454}
   - {x: 0, y: 0.43837115, z: 0.89879405}
-  - {x: 0, y: 0.46947157, z: 0.88294756}
   - {x: 0, y: 0.5, z: 0.8660254}
-  - {x: 0, y: 0.52991927, z: 0.8480481}
   - {x: 0, y: 0.5591929, z: 0.8290376}
-  - {x: 0, y: 0.58778524, z: 0.809017}
   - {x: 0, y: 0.6156615, z: 0.7880108}
-  - {x: 0, y: 0.6427876, z: 0.76604444}
   - {x: 0, y: 0.6691306, z: 0.7431448}
-  - {x: 0, y: 0.6946584, z: 0.7193398}
   - {x: 0, y: 0.7193398, z: 0.6946584}
-  - {x: 0, y: 0.74314487, z: 0.66913056}
   - {x: 0, y: 0.76604444, z: 0.64278764}
-  - {x: 0, y: 0.7880107, z: 0.6156615}
   - {x: 0, y: 0.809017, z: 0.5877853}
-  - {x: 0, y: 0.82903755, z: 0.5591929}
   - {x: 0, y: 0.8480481, z: 0.52991927}
 --- !u!65 &1665244308
 BoxCollider:
@@ -980,7 +962,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _accuracy: 20
   _rayDistance: 75
-  _speedUpdate: 100
+  _periodImpulse: 0
+  _periodUpdate: 0
+  _deltaAngle: 0
   _point: {fileID: 4467240183047226814, guid: fcb9f16ee1d358744b00bde982572a00, type: 3}
   _directions:
   - {x: 0, y: -0.5, z: 0.8660254}
@@ -1119,7 +1103,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _accuracy: 20
   _rayDistance: 75
-  _speedUpdate: 100
+  _periodImpulse: 0
+  _periodUpdate: 0
+  _deltaAngle: 0
   _point: {fileID: 4467240183047226814, guid: fcb9f16ee1d358744b00bde982572a00, type: 3}
   _directions:
   - {x: 0, y: -0.5, z: 0.8660254}
@@ -1606,7 +1592,7 @@ GameObject:
   - component: {fileID: 8693631682838527716}
   m_Layer: 0
   m_Name: Ground (1)
-  m_TagString: Finish
+  m_TagString: OpaqueObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

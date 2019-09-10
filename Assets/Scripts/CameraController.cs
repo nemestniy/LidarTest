@@ -20,7 +20,8 @@ public class CameraController : MonoBehaviour
     {
         if(_targetPosition != null) 
             transform.position = _targetPosition.position;
-        _lidarCamera.rect = new Rect(Camera.main.rect.xMax / 1.5f, Camera.main.rect.yMax / 1.5f, Camera.main.rect.xMax, Camera.main.rect.yMax);
+        if(_lidarCamera != null)
+            _lidarCamera.rect = new Rect(Camera.main.rect.xMax / 1.5f, Camera.main.rect.yMax / 1.5f, Camera.main.rect.xMax, Camera.main.rect.yMax);
     }
 
     private void Update()
