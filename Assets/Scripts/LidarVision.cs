@@ -21,6 +21,9 @@ public class LidarVision : MonoBehaviour
     private float _deltaAngle;
 
     [SerializeField]
+    private LayerMask _laserLayer;
+
+    [SerializeField]
     private Point _point;
 
     public List<Vector3> _directions;
@@ -65,18 +68,27 @@ public class LidarVision : MonoBehaviour
         }
     }
 
+    private void ImpulseSector(float distance)
+    {
+        foreach (Vector3 direction in _directions)
+        {
+            var curDirection = transform.TransformDirection(direction);
+            if(Physics.Raycast(transform.position, curDirection, out _hit, distance, _laserLayer))
+            {
+                    if(!_hit.collider.isTrigger)
+                        Instantiate(_point, _hit.point, Quaternion.identity);
+            }
+        }
+    }
+
     private void FixedUpdate()
     {
         _timerImpulse += Time.fixedDeltaTime;
         _timerUpdate += Time.fixedDeltaTime;
 
-        if(_count >= _directions.Count)
-            _count = 0;
-
         if(_timerImpulse >= _periodImpulse)
         {
-            var currentDirection = transform.TransformDirection(_directions[_count]);
-            Impulse(currentDirection, _rayDistance);
+            ImpulseSector(_rayDistance);
             _timerImpulse = 0;
         }
 
@@ -87,7 +99,6 @@ public class LidarVision : MonoBehaviour
             _timerUpdate = 0;
         }
 
-        _count++;
 
         /*var currentDirection = transform.TransformDirection(_directions[_count]);
         if (Physics.Raycast(transform.position, currentDirection, out _hit, _rayDistance))
